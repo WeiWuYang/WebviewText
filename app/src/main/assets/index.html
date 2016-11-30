@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+     <meta charset="utf-8">
+</head>
+<body>
+<div id="message">还没收到来自安卓的消息</div>
+<input type="button"value="网页消息"onclick="useAndroid()">
+<input type="button"value="登陆"onclick="login()">
+</body>
+<script>
+//用于调用安卓代码
+function useAndroid(){
+    android.changetext();
+}
+function login(){
+android.login();
+}
+//<--用于给安卓调用函数-->
+
+function useJs(){
+     var msg=document.getElementById("message");
+     msg.innerHTML="已经收到来自安卓的消息"
+}
+</script>
+</html>
